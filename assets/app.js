@@ -35,16 +35,25 @@ var CONFIG = {
     avaliar:   "https://g.page/r/CYzOqt53fFGoEBM/review"
   },
 
-  // utm_source -> texto que entra no fim da mensagem
+  // utm_source -> texto que entra no fim da mensagem.
+  // O texto e igual ao chip do cadastro de cliente no painel, de proposito:
+  // a Bruna le "(Vim pelo Google Meu Negocio)" e clica no chip de mesmo nome.
   origens: {
-    instagram: "Vim pelo Instagram",
-    google:    "Vim pelo Google",
-    gmn:       "Vim pelo Google",
-    whatsapp:  "Vim pelo WhatsApp",
-    qr:        "Vim pelo QR code",
-    impresso:  "Vim pelo catálogo impresso",
-    anuncio:   "Vim pelo anúncio",
-    facebook:  "Vim pelo Facebook"
+    gmn:        "Vim pelo Google Meu Negócio",
+    google:     "Vim pelo Google Meu Negócio",
+    maps:       "Vim pelo Google Meu Negócio",
+    gads:       "Vim pelo Google Ads",
+    "google-ads": "Vim pelo Google Ads",
+    meta:       "Vim pelo Meta Ads",
+    metaads:    "Vim pelo Meta Ads",
+    anuncio:    "Vim pelo Meta Ads",
+    facebook:   "Vim pelo Meta Ads",
+    instagram:  "Vim pelo Instagram",
+    ig:         "Vim pelo Instagram",
+    indicacao:  "Vim por indicação",
+    whatsapp:   "Vim pelo WhatsApp",
+    qr:         "Vim pelo QR code",
+    impresso:   "Vim pelo catálogo impresso"
   }
 };
 
