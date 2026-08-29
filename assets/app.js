@@ -103,7 +103,41 @@ var CONFIG = {
     return null;
   }
 
+  // ---- Google Ads: conversao "Agendamento WhatsApp" ----
+  var GADS = "AW-17940435675/1dOfCOb2oOocENul1epC";
+  var TICKET_PADRAO = 170;
+
+  // le o preco do proprio card do procedimento (fonte unica: o HTML)
+  function valorDe(chave) {
+    if (chave.indexOf("ag-") !== 0) { return TICKET_PADRAO; }
+    var bloco = document.querySelector('[data-proc="' + chave.slice(3) + '"] .pv');
+    if (!bloco) { return TICKET_PADRAO; }
+    // so o texto ANTES do <small> ("R$ 500" e nao "R$ 500" + "3 sessoes")
+    var bruto = bloco.firstChild && bloco.firstChild.nodeType === 3
+      ? bloco.firstChild.nodeValue
+      : bloco.textContent;
+    var n = parseInt(String(bruto).replace(/[^0-9]/g, ""), 10);
+    return isNaN(n) || n <= 0 ? TICKET_PADRAO : n;
+  }
+
+  function ehAgendamento(chave) {
+    return chave.indexOf("ag-") === 0 ||
+           chave === "hero" || chave === "barra" || chave === "barra-catalogo";
+  }
+
+  function disparaGoogle(chave) {
+    if (typeof window.gtag !== "function" || !ehAgendamento(chave)) { return; }
+    try {
+      window.gtag("event", "conversion", {
+        send_to: GADS,
+        value: valorDe(chave),
+        currency: "BRL"
+      });
+    } catch (err) {}
+  }
+
   function dispara(chave) {
+    disparaGoogle(chave);
     var e = resolve(chave);
     if (!e || typeof window.fbq !== "function") { return; }
     var dados = { content_name: chave, origem: origem || "direto" };
