@@ -1,1 +1,30 @@
-temporario
+FOTOS DOS PROCEDIMENTOS
+=======================
+Coloque aqui uma foto por procedimento, com EXATAMENTE estes nomes.
+Enquanto o arquivo nao existir, o bloco da foto simplesmente nao aparece
+- nao quebra nada.
+
+  CÍLIOS
+    Volume Natural           -> volume-natural.jpg
+    Efeito Rímel             -> efeito-rimel.jpg
+    Volume Elegance          -> volume-elegance.jpg
+    Volume Brasileiro        -> volume-brasileiro.jpg
+    Fox Eyes                 -> fox-eyes.jpg
+    Lash Lifting             -> lash.jpg
+  SOBRANCELHAS
+    Design de sobrancelhas   -> design.jpg
+    Design com henna         -> henna.jpg
+    Design com tintura       -> tintura.jpg
+    Brow Lamination          -> brow-lamination.jpg
+    Sense Brows · reconstrução -> sense-brows.jpg
+  LÁBIOS
+    Micropigmentação labial  -> labial.jpg
+    Spa labial               -> spa-labial.jpg
+
+FORMATO
+  - Horizontal, proporcao 4:3 (ex.: 1200 x 900 px)
+  - Ate 250 KB por arquivo (foto pesada deixa a pagina lenta no 4G)
+  - Sempre .jpg, tudo minusculo, sem acento e sem espaco no nome
+
+TROCAR UMA FOTO
+  Basta subir outro arquivo com o mesmo nome por cima. Nao mexe em codigo.
