@@ -35,6 +35,10 @@ var CONFIG = {
     avaliar:   "https://g.page/r/CYzOqt53fFGoEBM/review"
   },
 
+  // Coletor do painel (Apps Script "Coletor do Site - Bruna", URL /exec).
+  // Vazio = nao envia nada. Ele so conta cliques e guarda a visita que veio de anuncio.
+  coletor: "https://script.google.com/macros/s/AKfycbx2DBO6cUC9Z3jXDjJqTb_6tZAogk7rVGj-_6zFP0o9jHK_FVhUraXQQ18FTHEDvssq6A/exec",
+
   // utm_source -> texto que entra no fim da mensagem.
   // O texto e igual ao chip do cadastro de cliente no painel, de proposito:
   // a Bruna le "(Vim pelo Google Meu Negocio)" e clica no chip de mesmo nome.
@@ -65,8 +69,11 @@ var CONFIG = {
 
   // ---- de onde a pessoa veio ----
   var origem = "";
+  var q = null;
+  try { q = new URLSearchParams(window.location.search); } catch (e) {}
+  function param(n) { try { return q ? String(q.get(n) || "").trim() : ""; } catch (e) { return ""; } }
   try {
-    var s = (new URLSearchParams(window.location.search).get("utm_source") || "").toLowerCase().trim();
+    var s = param("utm_source").toLowerCase();
     if (s) {
       origem = CONFIG.origens[s] || ("Vim por: " + s);
       try { sessionStorage.setItem("bc_origem", origem); } catch (e) {}
@@ -75,9 +82,49 @@ var CONFIG = {
     }
   } catch (e) {}
 
+  // ---- coletor: manda um ping para o painel (imagem 1x1, sem CORS) ----
+  function ping(params) {
+    if (!CONFIG.coletor) { return; }
+    try {
+      var partes = [];
+      for (var k in params) {
+        if (params[k]) { partes.push(k + "=" + encodeURIComponent(params[k])); }
+      }
+      var img = new Image();
+      img.src = CONFIG.coletor + "?" + partes.join("&") + "&_=" + Date.now();
+    } catch (e) {}
+  }
+
+  // ---- clique de anuncio (gclid/fbclid): guarda 90 dias e ganha um codigo curto.
+  // O codigo vai no fim da mensagem do WhatsApp (#K7Q2M). A Bruna digita na ficha
+  // e o painel liga a cliente ao clique, para a conversao voltar ao Google/Meta. ----
+  var codigo = "";
+  try {
+    var clique = {
+      g: param("gclid"), gb: param("gbraid"), wb: param("wbraid"), f: param("fbclid"),
+      s: param("utm_source").toLowerCase(), m: param("utm_medium").toLowerCase(), c: param("utm_campaign").toLowerCase()
+    };
+    var pago = clique.g || clique.gb || clique.wb || clique.f;
+    var guardado = null;
+    try { guardado = JSON.parse(localStorage.getItem("bc_clique") || "null"); } catch (e) {}
+    if (guardado && (!guardado.t || Date.now() - guardado.t > 90 * 86400000)) { guardado = null; }
+
+    if (pago) {
+      var abc = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789", novo = "";
+      for (var z = 0; z < 5; z++) { novo += abc.charAt(Math.floor(Math.random() * abc.length)); }
+      clique.k = novo;
+      clique.t = Date.now();
+      try { localStorage.setItem("bc_clique", JSON.stringify(clique)); } catch (e) {}
+      guardado = clique;
+      ping({ t: "visita", k: clique.k, g: clique.g, gb: clique.gb, wb: clique.wb, f: clique.f, s: clique.s, m: clique.m, c: clique.c });
+    }
+    if (guardado && guardado.k) { codigo = guardado.k; }
+  } catch (e) {}
+
   function linkWhats(chave) {
     var msg = CONFIG.mensagens[chave] || CONFIG.mensagens.agendar;
     if (origem) { msg += " (" + origem + ")"; }
+    if (codigo) { msg += " #" + codigo; }
     return "https://wa.me/" + CONFIG.telefone + "?text=" + encodeURIComponent(msg);
   }
 
@@ -148,7 +195,10 @@ var CONFIG = {
   function dispara(chave) {
     disparaGoogle(chave);
     var e = resolve(chave);
-    if (!e || typeof window.fbq !== "function") { return; }
+    if (!e) { return; }
+    // painel: conta o clique (so nomes da lista fechada do coletor)
+    ping({ t: "evento", n: e.custom || (e.padrao[0] || "") });
+    if (typeof window.fbq !== "function") { return; }
     var dados = { content_name: chave, origem: origem || "direto" };
     for (var i = 0; i < e.padrao.length; i++) {
       try { window.fbq("track", e.padrao[i], dados); } catch (err) {}
@@ -157,6 +207,9 @@ var CONFIG = {
       try { window.fbq("trackCustom", e.custom, dados); } catch (err) {}
     }
   }
+
+  // painel: conta a visita
+  ping({ t: "evento", n: "PageView" });
 
   // ---- monta os links externos ----
   var externos = document.querySelectorAll("[data-wa],[data-link]");
