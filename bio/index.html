@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Bruna Carvalho Beauty</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://brunacarvalho.social.br/">
+<!-- Link da bio do Instagram. Responde 200 e manda para a pagina real ja etiquetada,
+     para a visita entrar no painel como Instagram e nao como trafego direto.
+     Aceita ?c=nome para separar a campanha (ex: link de story). -->
+<script>
+var c = new URLSearchParams(location.search).get("c") || "perfil";
+c = encodeURIComponent(String(c).slice(0, 40));
+location.replace("/?utm_source=instagram&utm_medium=bio&utm_campaign=" + c);
+</script>
+<meta http-equiv="refresh" content="0; url=/?utm_source=instagram&utm_medium=bio&utm_campaign=perfil">
+</head>
+<body style="margin:0;background:#FBF6F4;color:#5A463F;font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif">
+<p style="padding:24px">Abrindo... <a href="/?utm_source=instagram&utm_medium=bio&utm_campaign=perfil" style="color:#8A5348">clique aqui</a> se nao abrir sozinho.</p>
+</body>
+</html>
