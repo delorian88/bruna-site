@@ -116,7 +116,8 @@ var CONFIG = {
       clique.t = Date.now();
       try { localStorage.setItem("bc_clique", JSON.stringify(clique)); } catch (e) {}
       guardado = clique;
-      ping({ t: "visita", k: clique.k, g: clique.g, gb: clique.gb, wb: clique.wb, f: clique.f, s: clique.s, m: clique.m, c: clique.c });
+      // 'c' e parametro reservado do Apps Script; a campanha vai como 'uc'
+      ping({ t: "visita", k: clique.k, g: clique.g, gb: clique.gb, wb: clique.wb, f: clique.f, s: clique.s, m: clique.m, uc: clique.c });
     }
     if (guardado && guardado.k) { codigo = guardado.k; }
   } catch (e) {}
