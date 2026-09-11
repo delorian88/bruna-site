@@ -88,6 +88,8 @@ var CONFIG = {
     if (!CONFIG.coletor) { return; }
     try {
       var partes = [];
+      // pagina do evento: sem isto o painel soma todas as paginas num numero so
+      if (params.t === "evento" && !params.p) { params.p = location.pathname; }
       for (var k in params) {
         if (params[k]) { partes.push(k + "=" + encodeURIComponent(params[k])); }
       }
