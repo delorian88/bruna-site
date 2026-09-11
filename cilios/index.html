@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Extensão de Cílios em Cuiabá — Bruna Carvalho Beauty</title>
+<meta name="description" content="Extensão de cílios fio a fio no Porto, em Cuiabá. Volume Natural, Efeito Rímel, Elegance, Brasileiro e Fox Eyes a partir de R$ 150, com avaliação do seu cílio antes de aplicar.">
+<meta name="theme-color" content="#FDF9F7">
+<meta name="color-scheme" content="light only">
+<link rel="canonical" href="https://brunacarvalho.social.br/cilios/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Extensão de Cílios em Cuiabá — Bruna Carvalho Beauty">
+<meta property="og:description" content="Cílios fio a fio, no formato do seu olho. Cinco efeitos a partir de R$ 150, em sala privativa no Porto, em Cuiabá.">
+<meta property="og:image" content="https://brunacarvalho.social.br/cilios/img/hero-800.webp">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23FDF9F7'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%238A5348' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/cormorant-garamond-latin-500-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/jost-latin-400-normal.woff2" crossorigin>
+<link rel="preload" as="image" href="/cilios/img/hero-800.webp" imagesrcset="/cilios/img/hero-480.webp 480w, /cilios/img/hero-800.webp 800w, /cilios/img/hero-1100.webp 1100w" imagesizes="(max-width:900px) 100vw, 50vw">
+<style>
+@font-face{font-family:'Cormorant Garamond';font-weight:500;font-display:swap;src:url(/assets/fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-weight:500;font-style:italic;font-display:swap;src:url(/assets/fonts/cormorant-garamond-latin-500-italic.woff2) format('woff2')}
+@font-face{font-family:'Jost';font-weight:400;font-display:swap;src:url(/assets/fonts/jost-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Jost';font-weight:500;font-display:swap;src:url(/assets/fonts/jost-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Lato';font-weight:900;font-display:swap;src:url(/assets/fonts/lato-latin-900-normal.woff2) format('woff2')}
+
+/* ===================================================================
+   TOKENS
+   =================================================================== */
+:root{
+  --ground:#FDF9F7; --surface:#FFFFFF; --cream:#FAF2EE; --blush:#F7E6E1; --blush-2:#F2D9D3;
+  --ink:#3A2D29; --ink-2:#6E5B55; --muted:#9C8A84;
+  --line:#EFDFD9; --line-2:#E4CDC6;
+  --brand:#B4786C; --deep:#8A5348; --deep-2:#73433A; --rose:#DEAEA8; --star:#C08A2E;
+
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --num:'Lato',system-ui,sans-serif;
+
+  --pad:20px;                 /* respiro lateral no celular */
+  --max:1120px;
+  --r-g:26px; --r-c:18px; --r-s:12px;
+  --sombra:0 1px 2px rgba(90,58,50,.03), 0 12px 30px -20px rgba(90,58,50,.22);
+  --sombra-2:0 2px 4px rgba(90,58,50,.04), 0 30px 60px -34px rgba(90,58,50,.34);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+html,body{max-width:100%;overflow-x:clip}
+body{margin:0;background:var(--ground);color:var(--ink-2);
+     font-family:var(--sans);font-size:15.5px;line-height:1.7;
+     -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block;height:auto}
+figure{margin:0}
+a{color:inherit}
+p{margin:0}
+::selection{background:var(--blush)}
+.wrap{width:min(100% - (var(--pad) * 2),var(--max));margin-inline:auto}
+
+/* ===================================================================
+   TIPOGRAFIA
+   =================================================================== */
+h1,h2,h3{margin:0;font-weight:500}
+h1,h2{font-family:var(--serif);color:var(--deep);letter-spacing:-.004em;line-height:1.22}
+h1{font-size:clamp(30px,5.4vw,40px)}
+h2{font-size:clamp(27px,4.6vw,36px)}
+h3{font-family:var(--sans);font-size:15px;font-weight:500;line-height:1.4;color:var(--ink)}
+.olho{display:block;font-family:var(--sans);font-size:10.5px;font-weight:500;
+      letter-spacing:.24em;text-transform:uppercase;color:var(--brand);margin:0 0 14px}
+.sub{margin-top:16px;font-size:15.5px;line-height:1.72;color:var(--ink-2);max-width:46ch}
+.mini{font-size:12px;line-height:1.55;color:var(--muted)}
+.num{font-family:var(--num);font-weight:900}
+
+/* ===================================================================
+   BOTÕES E SELOS
+   =================================================================== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+     padding:14px 26px;border-radius:999px;background:var(--deep);color:#fff;text-decoration:none;
+     font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1;
+     box-shadow:0 10px 20px -14px rgba(115,67,58,.85);
+     transition:background .18s ease,transform .18s ease}
+.btn:hover{background:var(--deep-2)}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:17px;height:17px;flex:none}
+.btn.clara{background:var(--surface);color:var(--deep);border:1px solid var(--line-2);box-shadow:none}
+.btn.clara:hover{background:var(--cream)}
+.local{display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-size:12.5px;color:var(--muted)}
+.local svg{width:13px;height:13px;flex:none;color:var(--brand)}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:999px;
+      border:1px solid var(--line-2);background:var(--surface);color:var(--deep);
+      text-decoration:none;font-size:12px;font-weight:500;line-height:1;transition:border-color .18s}
+.pill:hover{border-color:var(--brand)}
+
+/* ===================================================================
+   ORNAMENTO
+   =================================================================== */
+.ramo{display:none;position:absolute;color:var(--rose);opacity:.4;pointer-events:none;z-index:0}
+.fim .ramo{display:block}
+.ramo svg{width:100%;height:auto;display:block}
+
+/* ===================================================================
+   TOPO
+   =================================================================== */
+.topo{position:relative;z-index:3;background:var(--ground)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.topo img{width:84px;height:auto}
+.topo .btn{padding:10px 16px;font-size:10px;letter-spacing:.12em}
+.so-desk{display:none}
+
+/* ===================================================================
+   HERO
+   =================================================================== */
+.hero{position:relative;background:var(--ground);padding:0 0 44px}
+.hero-foto{position:relative;overflow:hidden;border-bottom-left-radius:90px}
+.hero-foto img{width:100%;height:clamp(260px,52vw,330px);object-fit:cover;object-position:58% 34%}
+.hero-copy{padding:32px var(--pad) 0}
+.hero-copy .btn{margin-top:26px}
+
+/* faixa de confiança */
+.confia{background:var(--blush);position:relative;z-index:1}
+.confia .wrap{display:grid;grid-template-columns:1fr;gap:0;padding:4px 0}
+.confia .it{display:grid;grid-template-columns:auto 1fr;gap:13px;align-items:center;padding:14px 2px}
+.confia .it + .it{border-top:1px solid rgba(180,120,108,.2)}
+.confia svg{width:20px;height:20px;color:var(--deep);display:block;stroke-width:1.3}
+.confia span{display:block;font-size:9.5px;font-weight:500;letter-spacing:.2em;
+             text-transform:uppercase;color:var(--brand);line-height:1.2}
+.confia b{display:block;margin-top:5px;font-family:var(--serif);font-size:19px;font-weight:500;
+          color:var(--ink);line-height:1.2}
+
+/* ===================================================================
+   SEÇÕES
+   =================================================================== */
+section{position:relative;padding:56px 0;overflow:hidden}
+.cream{background:var(--cream)}
+.branco{background:var(--surface)}
+.cab{margin-bottom:28px;position:relative;z-index:1}
+.cab .sub{margin-top:14px}
+
+/* antes e depois */
+.pares{display:grid;gap:18px}
+.moldura{position:relative;border-radius:var(--r-c);overflow:hidden;box-shadow:var(--sombra)}
+.moldura img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.moldura .tag{position:absolute;bottom:12px;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+  background:rgba(255,255,255,.93);padding:6px 12px;border-radius:999px;color:var(--deep);font-weight:500}
+.moldura .tag.a{left:12px}
+.moldura .tag.d{left:calc(50% + 12px)}
+.par figure{margin:0}
+.par figcaption{margin-top:10px}
+.creditos{margin-top:18px}
+
+/* lista com ícone */
+.itens{display:grid;gap:22px}
+.item{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start}
+.item .ic{width:44px;height:44px;border-radius:50%;background:var(--blush);display:grid;place-items:center}
+.item .ic svg{width:19px;height:19px;color:var(--deep);stroke-width:1.3}
+.item p{margin-top:5px;font-size:14.5px;line-height:1.62}
+.dupla{display:grid;gap:32px}
+.dupla .foto{order:2}
+.dupla .foto img{border-radius:var(--r-g);aspect-ratio:4/5;object-fit:cover;box-shadow:var(--sombra-2)}
+.dupla .foto img.larga{aspect-ratio:4/3}
+
+/* etapas */
+.etapas{display:grid;gap:0;position:relative}
+.etapa{position:relative;padding:0 0 26px 60px}
+.etapa:last-child{padding-bottom:0}
+.etapa::before{content:"";position:absolute;left:19px;top:40px;bottom:-4px;width:1px;background:var(--line-2)}
+.etapa:last-child::before{display:none}
+.etapa .n{position:absolute;left:0;top:0;width:38px;height:38px;border-radius:50%;
+  background:var(--deep);color:#fff;display:grid;place-items:center;
+  font-family:var(--num);font-weight:900;font-size:12px;letter-spacing:.02em}
+.etapa h3{padding-top:9px;color:var(--deep);font-family:var(--serif);font-size:20px;font-weight:500}
+.etapa p{margin-top:5px;font-size:14.5px;line-height:1.62}
+.sala{margin-top:34px}
+.sala img{border-radius:var(--r-g);aspect-ratio:3/2;object-fit:cover;box-shadow:var(--sombra)}
+.sala figcaption{margin-top:10px}
+
+/* bruna */
+.fala{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.45;color:var(--ink);
+      padding-left:16px;border-left:1px solid var(--line-2);margin-top:18px}
+.nome{display:block;margin-top:14px;font-size:12px;font-weight:500;letter-spacing:.1em;
+      text-transform:uppercase;color:var(--brand)}
+.checks{margin:24px 0 0;padding:0;list-style:none;display:grid;gap:11px}
+.checks li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;color:var(--ink-2);line-height:1.55}
+.checks svg{width:15px;height:15px;flex:none;color:var(--brand);margin-top:4px;stroke-width:1.6}
+
+/* depoimentos */
+.deps{display:grid;gap:14px}
+.dep{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-c);
+     padding:20px 20px 17px;box-shadow:var(--sombra)}
+.dep .estrelas{color:var(--star);letter-spacing:2px;font-size:11px;display:block;margin-bottom:10px}
+.dep p{font-size:14.5px;line-height:1.62;color:var(--ink)}
+.dep .quem{margin-top:12px;font-size:11.5px;color:var(--muted)}
+.dep.destaque{background:var(--blush);border-color:transparent;box-shadow:none;
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:14px}
+.dep.destaque svg{width:26px;height:26px;color:var(--deep);stroke-width:1.2}
+.dep.destaque p{font-family:var(--serif);font-size:19px;line-height:1.4;color:var(--deep)}
+.deps + .mini{margin-top:14px}
+.deps + .mini a{color:var(--deep)}
+
+/* valor */
+.valor{display:grid;gap:28px}
+.card-valor{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-g);
+            padding:26px 24px 24px;box-shadow:var(--sombra-2)}
+.card-valor .rot{font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--brand)}
+.card-valor .v{display:flex;align-items:flex-start;gap:6px;margin-top:10px;color:var(--ink)}
+.card-valor .cifra{font-family:var(--num);font-weight:900;font-size:17px;line-height:1;padding-top:8px;color:var(--muted)}
+.card-valor .n{font-family:var(--num);font-weight:900;font-size:clamp(46px,12vw,56px);line-height:.88;letter-spacing:-.025em}
+.card-valor .cond{margin:20px 0 22px;padding-top:16px;border-top:1px solid var(--line);
+                  display:grid;gap:8px;font-size:14.5px}
+.card-valor .cond b{font-weight:500;color:var(--ink)}
+.card-valor .mini{margin-top:12px}
+
+/* faq */
+.faq{display:grid;gap:10px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-c);
+             transition:border-color .18s}
+.faq details[open]{border-color:var(--line-2)}
+.faq summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;gap:14px;
+             align-items:center;justify-content:space-between;
+             font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.45}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--sans);font-size:19px;font-weight:400;line-height:1;
+                    color:var(--brand);transition:transform .2s ease;flex:none}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{padding:0 18px 18px;font-size:14.5px;line-height:1.65}
+
+/* onde */
+.onde{display:grid;gap:26px}
+.onde img{border-radius:var(--r-g);aspect-ratio:3/2;object-fit:cover;box-shadow:var(--sombra)}
+.end{margin-top:16px;font-size:14.5px}
+.end b{display:block;font-family:var(--serif);font-size:21px;font-weight:500;color:var(--ink);margin-bottom:2px}
+.links{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+
+/* fechamento */
+.fim{position:relative;background:var(--blush-2);text-align:center;padding:60px 0;overflow:hidden}
+.fim h2{margin-inline:auto}
+.fim .sub{margin:16px auto 0;max-width:38ch}
+.fim .btn{margin-top:26px}
+.fim .local{display:flex;justify-content:center;margin-top:16px}
+
+/* rodapé */
+footer{background:var(--ground);padding:44px 0 120px;text-align:center}
+footer .marca{width:34px;margin:0 auto 14px;opacity:.9}
+footer .nome-marca{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.22em;
+                   text-transform:uppercase;color:var(--deep);line-height:1.7}
+footer .tags{margin-top:8px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+footer .redes{display:flex;justify-content:center;gap:12px;margin:20px 0 18px}
+footer .redes a{width:38px;height:38px;border-radius:50%;border:1px solid var(--line-2);
+                display:grid;place-items:center;color:var(--deep);transition:border-color .18s}
+footer .redes a:hover{border-color:var(--brand)}
+footer .redes svg{width:16px;height:16px}
+footer .risco{width:min(100%,320px);height:1px;background:var(--line);margin:20px auto}
+
+/* barra fixa */
+#sticky{position:fixed;left:0;right:0;bottom:0;z-index:9;display:flex;align-items:center;
+  justify-content:space-between;gap:14px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(253,249,247,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);transform:translateY(120%);transition:transform .28s ease}
+#sticky.on{transform:none}
+#sticky .p{font-size:11px;color:var(--muted);line-height:1.3;letter-spacing:.04em}
+#sticky .p b{display:block;font-family:var(--num);font-weight:900;font-size:15px;color:var(--ink);letter-spacing:-.01em}
+#sticky .btn{padding:12px 20px}
+
+/* ===================================================================
+   DESKTOP
+   =================================================================== */
+@media (min-width:900px){
+  :root{--pad:32px}
+  body{font-size:16px}
+  .topo .wrap{padding:22px 0}
+  .topo img{width:96px}
+  .topo .btn{padding:11px 20px;font-size:10.5px}
+  .so-desk{display:inline}
+
+  .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;
+        min-height:min(76vh,600px);padding:0}
+  .hero-foto{order:2;position:absolute;right:0;top:0;bottom:0;width:50vw;
+             border-bottom-left-radius:180px;border-top-left-radius:0}
+  .hero-foto img{width:100%;height:100%}
+  .hero-copy{grid-column:1;padding:48px 56px 48px max(var(--pad),calc((100vw - var(--max)) / 2));
+             max-width:none}
+  .ramo{display:block}
+  .hero-copy > *{max-width:470px}
+  .hero-copy .sub{max-width:430px}
+
+  .confia .wrap{grid-template-columns:repeat(4,1fr);padding:26px 0}
+  .confia .it{grid-template-columns:auto 1fr;gap:12px;align-items:center;padding:0 22px;
+              border-top:0}
+  .confia .it + .it{border-top:0;border-left:1px solid rgba(180,120,108,.22)}
+  .confia .it:first-child{padding-left:0}
+  .confia .it:last-child{padding-right:0}
+  .confia svg{width:22px;height:22px;margin:0}
+  .confia b{font-size:19px}
+  .confia span{font-size:9.5px}
+
+  section{padding:84px 0}
+  .cab{margin-bottom:38px}
+  .pares{grid-template-columns:1fr 1fr;gap:26px}
+  .dupla{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(40px,5vw,70px);align-items:center}
+  .dupla .foto{order:0}
+  .dupla.inverte .foto{order:2}
+  .itens{gap:24px}
+  .etapas{grid-template-columns:repeat(4,1fr);gap:0 clamp(24px,3vw,40px)}
+  .etapa{padding:0}
+  .etapa .n{position:static;margin-bottom:20px}
+  .etapa::before{left:46px;right:calc(-1 * clamp(24px,3vw,40px) - 8px);top:19px;bottom:auto;width:auto;height:1px}
+  .etapa h3{padding-top:0;font-size:21px}
+  .etapas .etapa:last-child::before{display:none}
+  .etapa p{margin-top:7px}
+  .sala{margin-top:48px}
+  .sala img{aspect-ratio:21/9}
+  .deps{grid-template-columns:repeat(3,1fr);gap:20px}
+  .valor{grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:clamp(44px,5vw,72px);align-items:center}
+  .card-valor{padding:32px 30px 28px}
+  .faq{grid-template-columns:1fr 1fr;gap:12px 20px;align-content:start}
+  .onde{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(40px,5vw,64px);align-items:center}
+  .fim{padding:96px 0}
+  footer{padding:60px 0 110px}
+}
+@media (min-width:1180px){
+  .hero-copy{padding-right:76px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+
+/* ===================================================================
+   FICHAS DE PROCEDIMENTO (os cinco volumes)
+   =================================================================== */
+.fichas{display:grid;gap:14px}
+.ficha{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-c);
+       overflow:hidden;box-shadow:var(--sombra)}
+.ficha .foto img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.ficha .corpo{padding:18px 18px 20px}
+.ficha h3{font-family:var(--serif);font-size:21px;font-weight:500;color:var(--deep);line-height:1.2}
+.ficha p{margin-top:8px;font-size:14.5px;line-height:1.6}
+.ficha .specs{display:flex;flex-wrap:wrap;gap:6px 8px;margin-top:14px}
+.ficha .specs span{font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--brand);background:var(--blush);border-radius:999px;padding:6px 11px;line-height:1}
+.ficha .pe{display:flex;align-items:center;justify-content:space-between;gap:14px;
+           margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.ficha .v{display:flex;align-items:baseline;gap:4px;color:var(--ink)}
+.ficha .v .cifra{font-family:var(--num);font-weight:900;font-size:13px;color:var(--muted)}
+.ficha .v .n{font-family:var(--num);font-weight:900;font-size:27px;line-height:1;letter-spacing:-.02em}
+.ficha .btn{padding:11px 18px;font-size:10.5px}
+
+/* escolha do efeito */
+.escolha{display:grid;gap:0;margin-top:4px}
+.escolha div{display:grid;grid-template-columns:1fr auto;gap:10px 18px;align-items:baseline;
+             padding:14px 0;border-top:1px solid var(--line)}
+.escolha div:last-child{border-bottom:1px solid var(--line)}
+.escolha .q{font-size:14.5px;color:var(--ink-2)}
+.escolha .r{font-family:var(--serif);font-size:18px;color:var(--deep);white-space:nowrap}
+.nota-escolha{margin-top:20px}
+
+/* lista compacta (sobrancelhas complementares) */
+.simples{display:grid;gap:0;margin-top:4px}
+.simples a{display:grid;grid-template-columns:1fr auto;gap:12px 18px;align-items:center;
+           padding:15px 0;border-top:1px solid var(--line);text-decoration:none;transition:opacity .16s}
+.simples a:last-child{border-bottom:1px solid var(--line)}
+.simples a:hover{opacity:.7}
+.simples .nm{font-size:15px;color:var(--ink)}
+.simples .nm small{display:block;margin-top:2px;font-size:12.5px;color:var(--muted)}
+.simples .vl{font-family:var(--num);font-weight:900;font-size:16px;color:var(--deep);white-space:nowrap}
+.pos-lista{margin-top:22px;display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center}
+
+/* destaque (manutenção) */
+.faixa-nota{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-g);
+            padding:24px 22px;box-shadow:var(--sombra)}
+.faixa-nota .v{display:flex;align-items:baseline;gap:5px;margin-top:12px;color:var(--ink)}
+.faixa-nota .v .cifra{font-family:var(--num);font-weight:900;font-size:15px;color:var(--muted)}
+.faixa-nota .v .n{font-family:var(--num);font-weight:900;font-size:38px;line-height:1;letter-spacing:-.02em}
+.faixa-nota .btn{margin-top:18px}
+
+@media (min-width:900px){
+  .fichas{grid-template-columns:1fr;gap:16px}
+  .ficha{display:grid;grid-template-columns:210px minmax(0,1fr);align-items:stretch}
+  .ficha .foto img{height:100%;aspect-ratio:auto;min-height:180px}
+  .ficha .corpo{padding:24px 26px;display:grid;align-content:center}
+  .ficha p{max-width:56ch}
+  .ficha .pe{margin-top:20px}
+  .escolha div{grid-template-columns:1fr 220px}
+  .escolha .q{font-size:15.5px}
+  .simples{grid-template-columns:1fr 1fr;gap:0 40px}
+  .simples a:nth-child(2){border-top:1px solid var(--line)}
+  .faixa-nota{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:center;
+              padding:30px 32px}
+  .faixa-nota .btn{margin-top:0}
+  .faixa-nota .lado{text-align:right}
+  .faixa-nota .v{justify-content:flex-end;margin-top:0;margin-bottom:14px}
+}
+</style>
+<!-- ====== Pixel + Google Ads: fila agora, script depois do 1o toque ====== -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[]}(window,document,'script');
+fbq('init','1607709067684946');fbq('track','PageView');
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());gtag('config','AW-17940435675');
+(function(){
+  var feito=false,timer;
+  function carrega(){
+    if(feito)return; feito=true; clearTimeout(timer);
+    ['https://connect.facebook.net/en_US/fbevents.js',
+     'https://www.googletagmanager.com/gtag/js?id=AW-17940435675'
+    ].forEach(function(src){var t=document.createElement('script');t.async=true;t.src=src;document.head.appendChild(t);});
+  }
+  ['pointerdown','touchstart','scroll','keydown','mousemove'].forEach(function(ev){
+    window.addEventListener(ev,carrega,{passive:true,once:true});
+  });
+  timer=setTimeout(carrega,4000);
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1607709067684946&ev=PageView&noscript=1"></noscript>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["BeautySalon","LocalBusiness"],"@id":"https://brunacarvalho.social.br/#estudio","name":"Bruna Carvalho Beauty","description":"Estúdio de extensão de cílios, design de sobrancelhas e micropigmentação labial no bairro Porto, em Cuiabá.","url":"https://brunacarvalho.social.br/","image":"https://brunacarvalho.social.br/labios/img/estudio-1200.webp","logo":"https://brunacarvalho.social.br/labios/img/logo.webp","telephone":"+55 65 99220-8250","priceRange":"$$","currenciesAccepted":"BRL","address":{"@type":"PostalAddress","streetAddress":"Rua 13 de Junho, 2040 — Sala 202","addressLocality":"Cuiabá","addressRegion":"MT","addressCountry":"BR"},"areaServed":{"@type":"City","name":"Cuiabá"},"sameAs":["https://www.instagram.com/bruna.carvalhol/","https://maps.google.com/?cid=12128612125764144780"]},{"@type":"Service","@id":"https://brunacarvalho.social.br/cilios/#servico","name":"Extensão de cílios em Cuiabá","serviceType":"Extensão de cílios","url":"https://brunacarvalho.social.br/cilios/","provider":{"@id":"https://brunacarvalho.social.br/#estudio"},"areaServed":{"@type":"City","name":"Cuiabá"},"description":"Extensão de cílios fio a fio em sala privativa, com avaliação do cílio natural antes da aplicação. Sessão de cerca de 2 horas e manutenção a cada 15 a 20 dias.","hasOfferCatalog":{"@type":"OfferCatalog","name":"Efeitos de extensão de cílios","itemListElement":[{"@type":"Offer","name":"Volume Natural","price":"150","priceCurrency":"BRL"},{"@type":"Offer","name":"Efeito Rímel","price":"170","priceCurrency":"BRL"},{"@type":"Offer","name":"Volume Brasileiro","price":"170","priceCurrency":"BRL"},{"@type":"Offer","name":"Volume Elegance","price":"180","priceCurrency":"BRL"},{"@type":"Offer","name":"Fox Eyes","price":"190","priceCurrency":"BRL"},{"@type":"Offer","name":"Manutenção de cílios","price":"130","priceCurrency":"BRL"},{"@type":"Offer","name":"Lash Lifting","price":"150","priceCurrency":"BRL"}]},"offers":{"@type":"AggregateOffer","lowPrice":"150","highPrice":"190","priceCurrency":"BRL","offerCount":"5","availability":"https://schema.org/InStock","url":"https://brunacarvalho.social.br/cilios/"}},{"@type":"FAQPage","@id":"https://brunacarvalho.social.br/cilios/#faq","mainEntity":[{"@type":"Question","name":"Dói?","acceptedAnswer":{"@type":"Answer","text":"Não. Você fica deitada de olhos fechados e os fios são aplicados um a um, sem encostar na pele. A maior parte das clientes cochila durante a sessão."}},{"@type":"Question","name":"Estraga o meu cílio natural?","acceptedAnswer":{"@type":"Answer","text":"Não, quando a aplicação respeita a espessura que o seu fio aguenta e a manutenção é feita no prazo. O que danifica é peso demais, fio colado na pele e cliente puxando em casa."}},{"@type":"Question","name":"Quanto tempo demora a sessão?","acceptedAnswer":{"@type":"Answer","text":"Cerca de 2 horas para a aplicação completa, em qualquer um dos efeitos. A manutenção leva menos."}},{"@type":"Question","name":"De quanto em quanto tempo preciso voltar?","acceptedAnswer":{"@type":"Answer","text":"A cada 15 a 20 dias para a manutenção, que custa R$ 130. Se passar muito desse prazo, cai fio demais e a aplicação vira uma nova."}},{"@type":"Question","name":"Posso molhar e lavar o rosto?","acceptedAnswer":{"@type":"Answer","text":"Pode, e deve: cílio limpo dura mais. O cuidado é evitar vapor, sauna e esfregar a região nas primeiras horas."}},{"@type":"Question","name":"Posso usar rímel?","acceptedAnswer":{"@type":"Answer","text":"Não precisa — o efeito já é esse. Rímel comum e demaquilante oleoso soltam a cola e encurtam a durabilidade."}},{"@type":"Question","name":"E se eu quiser tirar antes?","acceptedAnswer":{"@type":"Answer","text":"A remoção é feita no estúdio, com produto próprio. Nunca puxe em casa: é assim que o cílio natural se quebra."}},{"@type":"Question","name":"Uso lente de contato, posso fazer?","acceptedAnswer":{"@type":"Answer","text":"Pode. É só avisar na hora de marcar e vir sem lente no dia."}},{"@type":"Question","name":"Qual a diferença entre os efeitos?","acceptedAnswer":{"@type":"Answer","text":"A quantidade de fios e o desenho. Volume Natural é o mais discreto; Efeito Rímel define como um rímel; Elegance é sofisticado sem exagero; Brasileiro preenche falhas; Fox Eyes alonga o canto externo."}}]}]}</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="s-estrela"><path d="M12 3.6l2.5 5.1 5.6.8-4 4 .9 5.6L12 16.4l-5 2.7.9-5.6-4-4 5.6-.8z" fill="none" stroke="currentColor" stroke-linejoin="round"/></g>
+    <g id="s-escudo"><path d="M12 3l7 2.8v5.4c0 4.1-2.9 7.5-7 8.5-4.1-1-7-4.4-7-8.5V5.8z" fill="none" stroke="currentColor" stroke-linejoin="round"/><path d="M9.2 11.9l2 2 3.6-3.7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="s-relogio"><circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor"/><path d="M12 7.4V12l3 1.8" fill="none" stroke="currentColor" stroke-linecap="round"/></g>
+    <g id="s-lupa"><circle cx="11" cy="11" r="6.3" fill="none" stroke="currentColor"/><path d="M15.6 15.6L20 20" fill="none" stroke="currentColor" stroke-linecap="round"/></g>
+    <g id="s-olho"><path d="M2.6 12S6.4 5.8 12 5.8 21.4 12 21.4 12 17.6 18.2 12 18.2 2.6 12 2.6 12z" fill="none" stroke="currentColor" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor"/></g>
+    <g id="s-pinca"><path d="M9 3.4l2.4 9.2M15 3.4l-2.4 9.2" fill="none" stroke="currentColor" stroke-linecap="round"/><path d="M12 12.6c1.8 0 3 1.4 3 3.2 0 2.1-1.3 4.8-3 4.8s-3-2.7-3-4.8c0-1.8 1.2-3.2 3-3.2z" fill="none" stroke="currentColor" stroke-linejoin="round"/></g>
+    <g id="s-calendario"><rect x="4" y="5.6" width="16" height="14" rx="2.4" fill="none" stroke="currentColor"/><path d="M4 9.8h16M8.6 3.8v3.2M15.4 3.8v3.2" fill="none" stroke="currentColor" stroke-linecap="round"/><path d="M9 14.5l2 2 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="s-check"><path d="M4.5 12.5l4.6 4.6L19.5 6.7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="s-pin"><path d="M12 21.2s6.6-6.1 6.6-10.6a6.6 6.6 0 1 0-13.2 0C5.4 15.1 12 21.2 12 21.2z" fill="none" stroke="currentColor" stroke-linejoin="round"/><circle cx="12" cy="10.4" r="2.4" fill="none" stroke="currentColor"/></g>
+    <g id="s-insta"><rect x="3.6" y="3.6" width="16.8" height="16.8" rx="5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="16.9" cy="7.1" r="1" fill="currentColor"/></g>
+    <path id="s-wpp" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/>
+    <g id="s-ramo" stroke="currentColor" stroke-width="1.1" fill="none" stroke-linecap="round">
+      <path d="M70 258c0-46-3-86 3-124 6-38 20-72 45-102"/>
+      <path d="M71 214c-15-3-26-15-28-30 16 0 29 12 32 27"/>
+      <path d="M74 172c15-5 25-19 25-35-16 2-27 16-27 32"/>
+      <path d="M80 133c-14-5-25-18-26-33 16 1 28 14 30 29"/>
+      <path d="M87 96c15-6 24-21 23-37-16 3-26 18-25 34"/>
+      <path d="M99 60c-13-6-22-19-22-33 15 2 25 15 26 30"/>
+      <circle cx="116" cy="30" r="4.4"/><circle cx="106" cy="16" r="3.4"/><circle cx="122" cy="14" r="2.8"/>
+    </g>
+  </defs>
+</svg>
+
+<header class="topo">
+  <div class="wrap">
+    <a href="/" aria-label="Bruna Carvalho Beauty"><img src="/labios/img/logo.webp" width="96" height="70" alt="Bruna Carvalho Beauty"></a>
+    <a class="btn clara" href="#" data-wa="agendar" data-ev="hero">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#s-wpp"/></svg><span class="so-desk">Quero </span>agendar</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-foto">
+    <img src="/cilios/img/hero-800.webp" srcset="/cilios/img/hero-480.webp 480w, /cilios/img/hero-800.webp 800w, /cilios/img/hero-1100.webp 1100w" sizes="(max-width:900px) 100vw, 50vw" width="800" height="1000" fetchpriority="high" alt="Olhar com extensão de cílios feita pela Bruna Carvalho: fios alinhados e efeito natural">
+  </div>
+  <div class="hero-copy">
+    <span class="olho">Extensão de cílios · Cuiabá</span>
+    <h1>O detalhe que muda<br>o seu olhar.</h1>
+    <p class="sub">Fio a fio, no formato do seu olho. Você acorda pronta, sem rímel e sem aquele peso de cílio postiço.</p>
+    <div class="cta">
+      <a class="btn" href="#" data-wa="agendar" data-ev="hero">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#s-wpp"/></svg>Quero agendar</a>
+    </div>
+    <span class="local"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><use href="#s-escudo"/></svg>Você fala direto com a Bruna, sem compromisso</span>
+  </div>
+</section>
+
+<!-- ================= CONFIANÇA ================= -->
+<div class="confia">
+  <div class="wrap">
+    <div class="it"><svg viewBox="0 0 24 24" fill="none"><use href="#s-lupa"/></svg>
+      <div><span>Antes de aplicar</span><b>Avaliação do seu cílio</b></div></div>
+    <div class="it"><svg viewBox="0 0 24 24" fill="none"><use href="#s-pinca"/></svg>
+      <div><span>A técnica</span><b>Fio a fio, sem peso</b></div></div>
+    <div class="it"><svg viewBox="0 0 24 24" fill="none"><use href="#s-relogio"/></svg>
+      <div><span>Sessão</span><b>Cerca de 2 horas</b></div></div>
+    <div class="it"><svg viewBox="0 0 24 24" fill="none"><use href="#s-pin"/></svg>
+      <div><span>Onde</span><b>Sala privativa no Porto</b></div></div>
+  </div>
+</div>
+
+<!-- ================= OS EFEITOS ================= -->
+<section id="efeitos">
+  <div class="ramo" style="right:-40px;top:60px;width:120px"><svg viewBox="0 0 140 260"><use href="#s-ramo"/></svg></div>
+  <div class="wrap">
+    <div class="cab">
+      <span class="olho">Os efeitos</span>
+      <h2>Cinco efeitos,<br>um olhar que é seu.</h2>
+      <p class="sub">A diferença entre eles é a quantidade de fios e o desenho. O valor é da aplicação completa, e a sessão leva cerca de 2 horas em qualquer um.</p>
+    </div>
+
+    <div class="fichas">
+
+      <article class="ficha" data-proc="volume-natural">
+        <div class="foto"><img src="/cilios/img/volume-natural-600.webp" srcset="/cilios/img/volume-natural-600.webp 600w, /cilios/img/volume-natural-900.webp 900w" sizes="(max-width:900px) calc(100vw - 40px), 210px" width="600" height="450" loading="lazy" alt="Volume Natural: cílios alongados com efeito discreto"></div>
+        <div class="corpo">
+          <h3>Volume Natural</h3>
+          <p>Para quem ama naturalidade, mas quer um olhar mais expressivo — um efeito semelhante ao rímel, porém mais delicado.</p>
+          <div class="specs"><span>Sessão 2h</span><span>Manutenção 15 a 20 dias</span></div>
+          <div class="pe">
+            <div class="v pv"><span class="cifra">R$</span><span class="n">150</span></div>
+            <a class="btn" href="#" data-wa="volume-natural" data-ev="ag-volume-natural">Agendar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha" data-proc="efeito-rimel">
+        <div class="foto"><img src="/cilios/img/efeito-rimel-600.webp" srcset="/cilios/img/efeito-rimel-600.webp 600w, /cilios/img/efeito-rimel-900.webp 900w" sizes="(max-width:900px) calc(100vw - 40px), 210px" width="600" height="450" loading="lazy" alt="Efeito Rímel: cílios definidos, como se estivesse de rímel"></div>
+        <div class="corpo">
+          <h3>Efeito Rímel</h3>
+          <p>Para quem ama cílios mais marcantes e um olhar bem definido. Efeito semelhante ao rímel, mas sem borrar e sem precisar retocar.</p>
+          <div class="specs"><span>Sessão 2h</span><span>Dura 15 a 20 dias</span><span>Sem manutenção</span></div>
+          <div class="pe">
+            <div class="v pv"><span class="cifra">R$</span><span class="n">170</span></div>
+            <a class="btn" href="#" data-wa="efeito-rimel" data-ev="ag-efeito-rimel">Agendar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha" data-proc="volume-elegance">
+        <div class="foto"><img src="/cilios/img/volume-elegance-600.webp" srcset="/cilios/img/volume-elegance-600.webp 600w, /cilios/img/volume-elegance-900.webp 900w" sizes="(max-width:900px) calc(100vw - 40px), 210px" width="600" height="450" loading="lazy" alt="Volume Elegance: olhar sofisticado com fios alinhados"></div>
+        <div class="corpo">
+          <h3>Volume Elegance</h3>
+          <p>Para quem busca um olhar sofisticado e elegante sem perder a naturalidade.</p>
+          <div class="specs"><span>Sessão 2h</span><span>Manutenção 15 a 20 dias</span></div>
+          <div class="pe">
+            <div class="v pv"><span class="cifra">R$</span><span class="n">180</span></div>
+            <a class="btn" href="#" data-wa="volume-elegance" data-ev="ag-volume-elegance">Agendar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha" data-proc="volume-brasileiro">
+        <div class="foto"><img src="/cilios/img/volume-brasileiro-600.webp" srcset="/cilios/img/volume-brasileiro-600.webp 600w, /cilios/img/volume-brasileiro-900.webp 900w" sizes="(max-width:900px) calc(100vw - 40px), 210px" width="600" height="450" loading="lazy" alt="Volume Brasileiro: cílios cheios, preenchendo as falhas"></div>
+        <div class="corpo">
+          <h3>Volume Brasileiro</h3>
+          <p>Preenche as falhas que o rímel não resolve. O efeito que a cliente pede quando tem evento, viagem ou quer se sentir mais produzida.</p>
+          <div class="specs"><span>Sessão 2h</span><span>Manutenção 15 a 20 dias</span></div>
+          <div class="pe">
+            <div class="v pv"><span class="cifra">R$</span><span class="n">170</span></div>
+            <a class="btn" href="#" data-wa="volume-brasileiro" data-ev="ag-volume-brasileiro">Agendar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha" data-proc="fox-eyes">
+        <div class="foto"><img src="/cilios/img/fox-eyes-600.webp" srcset="/cilios/img/fox-eyes-600.webp 600w, /cilios/img/fox-eyes-900.webp 900w" sizes="(max-width:900px) calc(100vw - 40px), 210px" width="600" height="450" loading="lazy" alt="Fox Eyes: olhar alongado, com os fios puxados no canto externo"></div>
+        <div class="corpo">
+          <h3>Fox Eyes</h3>
+          <p>Para quem ama um olhar mais alongado, moderno e marcante. Cria um visual mais puxadinho nos cantos externos dos olhos.</p>
+          <div class="specs"><span>Sessão 2h</span><span>Manutenção 15 a 20 dias</span></div>
+          <div class="pe">
+            <div class="v pv"><span class="cifra">R$</span><span class="n">190</span></div>
+            <a class="btn" href="#" data-wa="fox-eyes" data-ev="ag-fox-eyes">Agendar</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUAL É O SEU ================= -->
+<section class="cream">
+  <div class="wrap">
+    <div class="cab">
+      <span class="olho">Não sabe qual escolher</span>
+      <h2>Comece pelo que você<br>quer ouvir no espelho.</h2>
+    </div>
+    <div class="escolha">
+      <div><span class="q">“Quero um olhar mais aberto, mas ninguém pode perceber.”</span><span class="r">Volume Natural</span></div>
+      <div><span class="q">“Quero o efeito do rímel sem passar rímel todo dia.”</span><span class="r">Efeito Rímel</span></div>
+      <div><span class="q">“Quero um resultado bonito e discreto, para usar sempre.”</span><span class="r">Volume Elegance</span></div>
+      <div><span class="q">“Tenho falhas e quero os cílios bem cheios.”</span><span class="r">Volume Brasileiro</span></div>
+      <div><span class="q">“Quero o olhar puxadinho, alongado no canto.”</span><span class="r">Fox Eyes</span></div>
+    </div>
+    <p class="sub nota-escolha">Na avaliação eu olho o formato do seu olho e a saúde do seu cílio natural antes de indicar — às vezes o que você viu na foto não é o que cai melhor em você.</p>
+  </div>
+</section>
+
+<!-- ================= MANUTENÇÃO ================= -->
+<section>
+  <div class="wrap">
+    <div class="cab">
+      <span class="olho">Depois da aplicação</span>
+      <h2>A manutenção é o que<br>mantém o olhar bonito.</h2>
+      <p class="sub">Seu cílio natural cai e nasce o tempo todo, e com ele vai o fio aplicado. A cada 15 a 20 dias eu reponho o que saiu e realinho o desenho — leva menos tempo que a aplicação e custa menos.</p>
+    </div>
+    <div class="faixa-nota" data-proc="manutencao">
+      <div>
+        <h3>Manutenção de cílios</h3>
+        <p class="sub" style="margin-top:8px">A partir de 15 a 20 dias da aplicação. Se passar muito disso, já não é manutenção — é aplicação nova.</p>
+      </div>
+      <div class="lado">
+        <div class="v pv"><span class="cifra">R$</span><span class="n">130</span></div>
+        <a class="btn" href="#" data-wa="manutencao" data-ev="ag-manutencao">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#s-wpp"/></svg>Agendar manutenção</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LASH LIFTING ================= -->
+<section class="cream">
+  <div class="wrap dupla inverte">
+    <div class="foto">
+      <img src="/cilios/img/lash-900.webp" srcset="/cilios/img/lash-600.webp 600w, /cilios/img/lash-900.webp 900w" class="larga" sizes="(max-width:900px) calc(100vw - 40px), 44vw" width="900" height="675" loading="lazy" alt="Lash Lifting: curvatura no próprio cílio, sem fio sintético">
+    </div>
+    <div>
+      <div class="cab">
+        <span class="olho">Sem fio sintético</span>
+        <h2>Não quer extensão?<br>Existe o Lash Lifting.</h2>
+      </div>
+      <p class="sub" style="margin-top:0">Curvatura no seu próprio cílio, sem fio sintético. Durabilidade de 45 a 60 dias, sem manutenção e sem cuidado especial.</p>
+      <ul class="checks">
+        <li><svg viewBox="0 0 24 24" fill="none"><use href="#s-check"/></svg>Para quem tem cílio bom e quer só levantar o olhar.</li>
+        <li><svg viewBox="0 0 24 24" fill="none"><use href="#s-check"/></svg>Sessão de 2 horas, e você sai pronta.</li>
+        <li><svg viewBox="0 0 24 24" fill="none"><use href="#s-check"/></svg>Nada de voltar a cada 20 dias.</li>
+      </ul>
+      <div class="faixa-nota" style="margin-top:26px" data-proc="lash">
+        <div>
+          <h3>Lash Lifting</h3>
+          <p class="sub" style="margin-top:6px">Dura de 45 a 60 dias, sem manutenção.</p>
+        </div>
+        <div class="lado">
+          <div class="v pv"><span class="cifra">R$</span><span class="n">150</span></div>
+          <a class="btn" href="#" data-wa="lash" data-ev="ag-lash">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#s-wpp"/></svg>Agendar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SENSE BROWS ================= -->
+<section>
+  <div class="wrap">
+    <div class="cab">
+      <span class="olho">Sobrancelha em reconstrução</span>
+      <h2>Sense Brows, quando a<br>sobrancelha precisa voltar.</h2>
+      <p class="sub">Protocolo desenvolvido para estimular o crescimento das sobrancelhas. A partir de 3 sessões já é possível observar sinais de evolução, que variam de acordo com cada pessoa.</p>
+    </div>
+    <div class="faixa-nota" data-proc="sense-brows">
+      <div>
+        <h3>Sense Brows · reconstrução</h3>
+        <p class="sub" style="margin-top:8px">Começa por uma avaliação de 30 minutos a 1 hora, e o tratamento é montado para o seu caso.</p>
+      </div>
+      <div class="lado">
+        <div class="v pv"><span class="cifra">R$</span><span class="n">500</span></div>
+        <p class="mini" style="margin-top:4px">3 sessões</p>
+        <a class="btn" href="#" data-wa="sense-brows" data-ev="ag-sense-brows">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#s-wpp"/></svg>Quero avaliar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPLEMENTARES ================= -->
+<section class="cream">
+  <div class="wrap">
+    <div class="cab">
+      <span class="olho">Combina com o dia da aplicação</span>
+      <h2>Sobrancelha no mesmo dia,<br>o olhar inteiro pronto.</h2>
+      <p class="sub">São rápidos e cabem na mesma visita — a sessão de cílios já reserva o seu horário, e o design entra no fim.</p>
+    </div>
+    <div class="simples">
+      <a href="#" data-wa="design" data-ev="ag-design"><span class="nm">Design de sobrancelhas<small>30 min · retorno em 20 a 30 dias</small></span><span class="vl">R$ 55</span></a>
+      <a href="#" data-wa="henna" data-ev="ag-henna"><span class="nm">Design com henna<small>50 min · dura 5 a 7 dias</small></span><span class="vl">R$ 70</span></a>
+      <a href="#" data-wa="tintura" data-ev="ag-tintura"><span class="nm">Design com tintura<small>45 min · cor no fio, não na pele</small></span><span class="vl">R$ 80</span></a>
+      <a href="#" data-wa="brow-lamination" data-ev="ag-brow-lamination"><span class="nm">Brow Lamination<small>1h30 · dura 30 a 45 dias</small></span><span class="vl">R$ 150</span></a>
+    </div>
+    <div class="pos-lista">
+      <a class="pill" href="/">Ver todos os procedimentos</a>
+      <span class="mini">Inclui lábios e os valores completos.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= A BRUNA ================= -->
+<section>
+  <div class="wrap dupla">
+    <div class="foto">
+      <img src="/labios/img/bruna-480.webp" srcset="/labios/img/bruna-480.webp 480w, /labios/img/bruna-800.webp 800w" sizes="(max-width:900px) calc(100vw - 40px), 44vw" width="480" height="600" loading="lazy" alt="Bruna Carvalho, lash designer, no estúdio">
+    </div>
+    <div>
+      <div class="cab">
+        <span class="olho">Conheça a Bruna</span>
+        <h2>Quem vai cuidar de você.</h2>
+      </div>
+      <p class="fala">“Se você tem medo de procedimento artificial ou já teve uma experiência ruim, aqui você encontra avaliação cuidadosa e foco em naturalidade.”</p>
+      <span class="nome">Bruna Carvalho · Beauty</span>
+      <ul class="checks">
+        <li><svg viewBox="0 0 24 24" fill="none"><use href="#s-check"/></svg>Aplicação fio a fio, respeitando o que o seu cílio aguenta.</li>
+        <li><svg viewBox="0 0 24 24" fill="none"><use href="#s-check"/></svg>Sala privativa no Porto — sem fila, sem gente entrando e saindo.</li>
+        <li><svg viewBox="0 0 24 24" fill="none"><use href="#s-check"/></svg>Horário reservado só para você, com hora marcada.</li>
+        <li><svg viewBox="0 0 24 24" fill="none"><use href="#s-check"/></svg>Orientação de cuidado depois, pelo WhatsApp.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DEPOIMENTOS ================= -->
+<section class="cream">
+  <div class="wrap">
+    <div class="cab">
+      <span class="olho">O que elas dizem</span>
+      <h2>A confiança de quem<br>já deitou nessa maca.</h2>
+    </div>
+    <div class="deps">
+      <div class="dep"><span class="estrelas">★★★★★</span>
+        <p>“A Bruna arrasa demais, entrega beleza no olhar com naturalidade. Fiz lash lifting e amei! Deu um realce incrível nos meus cílios naturais.”</p>
+        <div class="quem">Larissa Amorim · avaliação no Google</div></div>
+      <div class="dep"><span class="estrelas">★★★★★</span>
+        <p>“Além de excelente profissional, é um amor de pessoa. Te recebe com todo carinho e delicadeza. O serviço prestado foi além do esperado.”</p>
+        <div class="quem">Brennda Borges · avaliação no Google</div></div>
+      <div class="dep destaque">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="#s-estrela"/></svg>
+        <p>As avaliações do estúdio ficam abertas no Google, escritas por quem já passou por aqui.</p>
+        <a class="pill" href="#" data-link="avaliar" data-ev="avaliar">Ver as avaliações</a>
+      </div>
+    </div>
+    <p class="mini">Depoimentos reais, publicados no Google.</p>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section>
+  <div class="wrap">
+    <div class="cab">
+      <span class="olho">Antes de agendar</span>
+      <h2>Dúvidas frequentes.</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Dói?</summary><p>Não. Você fica deitada de olhos fechados e os fios são aplicados um a um, sem encostar na pele. A maior parte das clientes cochila durante a sessão.</p></details>
+      <details><summary>Estraga o meu cílio natural?</summary><p>Não, quando a aplicação respeita a espessura que o seu fio aguenta e a manutenção é feita no prazo. O que danifica é peso demais, fio colado na pele e cliente puxando em casa.</p></details>
+      <details><summary>Quanto tempo demora a sessão?</summary><p>Cerca de 2 horas para a aplicação completa, em qualquer um dos efeitos. A manutenção leva menos.</p></details>
+      <details><summary>De quanto em quanto tempo preciso voltar?</summary><p>A cada 15 a 20 dias para a manutenção. Se passar muito desse prazo, cai fio demais e a aplicação vira uma nova.</p></details>
+      <details><summary>Posso molhar e lavar o rosto?</summary><p>Pode, e deve: cílio limpo dura mais. O cuidado é evitar vapor, sauna e esfregar a região nas primeiras horas. Eu te passo a orientação completa no dia.</p></details>
+      <details><summary>Posso usar rímel?</summary><p>Não precisa — o efeito já é esse. Rímel comum e demaquilante oleoso soltam a cola e encurtam a durabilidade.</p></details>
+      <details><summary>E se eu quiser tirar antes?</summary><p>A remoção é feita aqui, com produto próprio. Nunca puxe em casa: é assim que o cílio natural se quebra.</p></details>
+      <details><summary>Uso lente de contato, posso fazer?</summary><p>Pode. É só me avisar na hora de marcar, e você vem com o olho descansado, sem lente no dia.</p></details>
+      <details><summary>Como faço para agendar?</summary><p>Me chama no WhatsApp pelo botão aqui da página. A gente confere sua agenda, eu tiro suas dúvidas e já deixamos o horário reservado.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ONDE ================= -->
+<section class="cream">
+  <div class="wrap onde">
+    <img src="/labios/img/estudio-900.webp" srcset="/labios/img/estudio-600.webp 600w, /labios/img/estudio-900.webp 900w, /labios/img/estudio-1200.webp 1200w" sizes="(max-width:900px) calc(100vw - 40px), 53vw" width="900" height="600" loading="lazy" alt="Sala privativa do estúdio Bruna Carvalho Beauty">
+    <div>
+      <span class="olho">Onde fica</span>
+      <h2>Sala privativa no Porto.</h2>
+      <p class="end"><b>Rua 13 de Junho, 2040 · Sala 202</b>Porto, Cuiabá – MT</p>
+      <div class="links">
+        <a class="pill" href="#" data-link="maps" data-ev="rota">Como chegar</a>
+        <a class="pill" href="#" data-link="instagram" data-ev="instagram">Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FECHAMENTO ================= -->
+<div class="fim">
+  <div class="ramo" style="left:-30px;bottom:-30px;width:130px"><svg viewBox="0 0 140 260"><use href="#s-ramo"/></svg></div>
+  <div class="ramo" style="right:-34px;top:-20px;width:110px;transform:scaleX(-1)"><svg viewBox="0 0 140 260"><use href="#s-ramo"/></svg></div>
+  <div class="wrap">
+    <h2>Pronta para acordar<br>com o olhar pronto?</h2>
+    <p class="sub">Me manda uma mensagem, a gente vê o melhor efeito para o seu olho e reserva seu horário.</p>
+    <div><a class="btn" href="#" data-wa="agendar" data-ev="hero">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#s-wpp"/></svg>Quero agendar</a></div>
+    <span class="local"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><use href="#s-pin"/></svg>Atendimento no Porto, em Cuiabá</span>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <img class="marca" src="/labios/img/simbolo.webp" width="34" height="49" alt="" loading="lazy">
+    <div class="nome-marca">Bruna Carvalho<br>Beauty</div>
+    <div class="tags">Cílios · Sobrancelhas · Micropigmentação</div>
+    <div class="redes">
+      <a href="#" data-link="instagram" data-ev="instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><use href="#s-insta"/></svg></a>
+      <a href="#" data-wa="agendar" data-ev="hero" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#s-wpp"/></svg></a>
+    </div>
+    <span class="local"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><use href="#s-pin"/></svg>Rua 13 de Junho, 2040 · Sala 202 — Porto, Cuiabá – MT</span>
+    <div class="risco"></div>
+    <span class="mini"><a href="/">Ver todos os procedimentos</a></span>
+  </div>
+</footer>
+
+<div id="sticky">
+  <div class="p">Extensão de cílios<b>a partir de R$ 150</b></div>
+  <a class="btn" href="#" data-wa="agendar" data-ev="barra">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#s-wpp"/></svg>Agendar</a>
+</div>
+
+<script src="/assets/app.js" defer></script>
+</body>
+</html>
