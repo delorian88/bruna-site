@@ -50,6 +50,7 @@ body{margin:0;background:var(--ground);color:var(--ink-2);
      font-family:var(--sans);font-size:15.5px;line-height:1.7;
      -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 img{max-width:100%;display:block;height:auto}
+figure{margin:0}
 a{color:inherit}
 p{margin:0}
 ::selection{background:var(--blush)}
@@ -92,7 +93,8 @@ h3{font-family:var(--sans);font-size:15px;font-weight:500;line-height:1.4;color:
 /* ===================================================================
    ORNAMENTO
    =================================================================== */
-.ramo{position:absolute;color:var(--rose);opacity:.4;pointer-events:none;z-index:0}
+.ramo{display:none;position:absolute;color:var(--rose);opacity:.4;pointer-events:none;z-index:0}
+.fim .ramo{display:block}
 .ramo svg{width:100%;height:auto;display:block}
 
 /* ===================================================================
@@ -152,6 +154,7 @@ section{position:relative;padding:56px 0;overflow:hidden}
 .item .ic svg{width:19px;height:19px;color:var(--deep);stroke-width:1.3}
 .item p{margin-top:5px;font-size:14.5px;line-height:1.62}
 .dupla{display:grid;gap:32px}
+.dupla .foto{order:2}
 .dupla .foto img{border-radius:var(--r-g);aspect-ratio:4/5;object-fit:cover;box-shadow:var(--sombra-2)}
 
 /* etapas */
@@ -274,23 +277,25 @@ footer .risco{width:min(100%,320px);height:1px;background:var(--line);margin:20p
   .hero-foto img{width:100%;height:100%}
   .hero-copy{grid-column:1;padding:48px 56px 48px max(var(--pad),calc((100vw - var(--max)) / 2));
              max-width:none}
+  .ramo{display:block}
   .hero-copy > *{max-width:470px}
   .hero-copy .sub{max-width:430px}
 
-  .confia .wrap{grid-template-columns:repeat(3,1fr);padding:26px 0}
-  .confia .it{grid-template-columns:auto 1fr;gap:14px;align-items:center;padding:0 26px;
+  .confia .wrap{grid-template-columns:repeat(4,1fr);padding:26px 0}
+  .confia .it{grid-template-columns:auto 1fr;gap:12px;align-items:center;padding:0 22px;
               border-top:0}
   .confia .it + .it{border-top:0;border-left:1px solid rgba(180,120,108,.22)}
   .confia .it:first-child{padding-left:0}
   .confia .it:last-child{padding-right:0}
   .confia svg{width:22px;height:22px;margin:0}
-  .confia b{font-size:20px}
-  .confia span{font-size:10px}
+  .confia b{font-size:19px}
+  .confia span{font-size:9.5px}
 
   section{padding:84px 0}
   .cab{margin-bottom:38px}
   .pares{grid-template-columns:1fr 1fr;gap:26px}
   .dupla{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(40px,5vw,70px);align-items:center}
+  .dupla .foto{order:0}
   .dupla.inverte .foto{order:2}
   .itens{gap:24px}
   .etapas{grid-template-columns:repeat(4,1fr);gap:0 clamp(24px,3vw,40px)}
@@ -371,7 +376,7 @@ gtag('js',new Date());gtag('config','AW-17940435675');
 <header class="topo">
   <div class="wrap">
     <a href="/" aria-label="Bruna Carvalho Beauty"><img src="/labios/img/logo.webp" width="96" height="70" alt="Bruna Carvalho Beauty"></a>
-    <a class="btn" href="#" data-wa="labial-avaliacao" data-ev="ag-labial">
+    <a class="btn clara" href="#" data-wa="labial" data-ev="ag-labial">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#s-wpp"/></svg><span class="so-desk">Quero </span>agendar</a>
   </div>
 </header>
@@ -386,22 +391,24 @@ gtag('js',new Date());gtag('config','AW-17940435675');
     <h1>Lábios com cor e contorno,<br>sem parecer maquiagem.</h1>
     <p class="sub">Para quem quer a boca corada e definida já ao acordar — e tem medo de ficar artificial. A cor é escolhida com você, no seu tom.</p>
     <div class="cta">
-      <a class="btn" href="#" data-wa="labial-avaliacao" data-ev="ag-labial">
+      <a class="btn" href="#" data-wa="labial" data-ev="ag-labial">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#s-wpp"/></svg>Quero agendar</a>
     </div>
-    <span class="local"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><use href="#s-pin"/></svg>Atendimento no Porto, em Cuiabá</span>
+    <span class="local"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><use href="#s-escudo"/></svg>Você fala direto com a Bruna, sem compromisso</span>
   </div>
 </section>
 
 <!-- ================= CONFIANÇA ================= -->
 <div class="confia">
   <div class="wrap">
-    <div class="it"><svg viewBox="0 0 24 24" fill="none"><use href="#s-estrela"/></svg>
-      <div><span>Google</span><b>Avaliada por clientes</b></div></div>
-    <div class="it"><svg viewBox="0 0 24 24" fill="none"><use href="#s-escudo"/></svg>
-      <div><span>Atendimento</span><b>Sala privativa</b></div></div>
+    <div class="it"><svg viewBox="0 0 24 24" fill="none"><use href="#s-lupa"/></svg>
+      <div><span>Antes de marcar</span><b>Avaliação presencial</b></div></div>
+    <div class="it"><svg viewBox="0 0 24 24" fill="none"><use href="#s-gota"/></svg>
+      <div><span>A cor</span><b>Definida com você</b></div></div>
     <div class="it"><svg viewBox="0 0 24 24" fill="none"><use href="#s-relogio"/></svg>
       <div><span>Retoque</span><b>Incluso no valor</b></div></div>
+    <div class="it"><svg viewBox="0 0 24 24" fill="none"><use href="#s-pin"/></svg>
+      <div><span>Onde</span><b>Sala privativa no Porto</b></div></div>
   </div>
 </div>
 
@@ -538,7 +545,7 @@ gtag('js',new Date());gtag('config','AW-17940435675');
       <h2>Quanto custa e o que<br>já vem dentro do valor.</h2>
     </div>
     <div class="valor">
-      <div class="card-valor" data-proc="labial-avaliacao">
+      <div class="card-valor" data-proc="labial">
         <span class="rot">Micropigmentação labial</span>
         <div class="v pv"><span class="cifra">R$</span><span class="n">550</span></div>
         <div class="cond">
@@ -546,7 +553,7 @@ gtag('js',new Date());gtag('config','AW-17940435675');
           <span>Até <b>2x sem juros</b> no cartão</span>
           <span>Dura de <b>1 a 2 anos</b></span>
         </div>
-        <a class="btn" href="#" data-wa="labial-avaliacao" data-ev="ag-labial">
+        <a class="btn" href="#" data-wa="labial" data-ev="ag-labial">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#s-wpp"/></svg>Quero agendar</a>
         <p class="mini">Avaliação presencial, sem compromisso.</p>
       </div>
@@ -605,7 +612,7 @@ gtag('js',new Date());gtag('config','AW-17940435675');
   <div class="wrap">
     <h2>Pronta para uma boca bonita,<br>do seu jeito?</h2>
     <p class="sub">Me manda uma mensagem, a gente marca sua avaliação e decide juntas — sem pressão.</p>
-    <div><a class="btn" href="#" data-wa="labial-avaliacao" data-ev="ag-labial">
+    <div><a class="btn" href="#" data-wa="labial" data-ev="ag-labial">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#s-wpp"/></svg>Quero agendar</a></div>
     <span class="local"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><use href="#s-pin"/></svg>Atendimento no Porto, em Cuiabá</span>
   </div>
@@ -618,7 +625,7 @@ gtag('js',new Date());gtag('config','AW-17940435675');
     <div class="tags">Micropigmentação · Cílios · Sobrancelhas</div>
     <div class="redes">
       <a href="#" data-link="instagram" data-ev="instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><use href="#s-insta"/></svg></a>
-      <a href="#" data-wa="labial-avaliacao" data-ev="ag-labial" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#s-wpp"/></svg></a>
+      <a href="#" data-wa="labial" data-ev="ag-labial" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#s-wpp"/></svg></a>
     </div>
     <span class="local"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><use href="#s-pin"/></svg>Rua 13 de Junho, 2040 · Sala 202 — Porto, Cuiabá – MT</span>
     <div class="risco"></div>
@@ -628,7 +635,7 @@ gtag('js',new Date());gtag('config','AW-17940435675');
 
 <div id="sticky">
   <div class="p">Micropigmentação labial<b>R$ 550</b></div>
-  <a class="btn" href="#" data-wa="labial-avaliacao" data-ev="ag-labial">
+  <a class="btn" href="#" data-wa="labial" data-ev="ag-labial">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#s-wpp"/></svg>Agendar</a>
 </div>
 
