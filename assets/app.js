@@ -18,6 +18,7 @@ var CONFIG = {
     "volume-elegance":  "Oi, Bruna! Quero agendar o Volume Elegance.",
     "fox-eyes":         "Oi, Bruna! Quero agendar o Fox Eyes.",
     lash:               "Oi, Bruna! Quero agendar o Lash Lifting.",
+    manutencao:         "Oi, Bruna! Quero agendar a manutenção dos meus cílios.",
 
     design:             "Oi, Bruna! Quero agendar o design de sobrancelhas.",
     henna:              "Oi, Bruna! Quero agendar o design com henna.",
