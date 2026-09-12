@@ -86,6 +86,8 @@ var CONFIG = {
   // ---- coletor: manda um ping para o painel (imagem 1x1, sem CORS) ----
   function ping(params) {
     if (!CONFIG.coletor) { return; }
+    // so conta no dominio de verdade (espelho do GitHub, arquivo local e previa ficam de fora)
+    if (!/(^|\.)brunacarvalho\.social\.br$/.test(location.hostname)) { return; }
     try {
       var partes = [];
       // pagina do evento: sem isto o painel soma todas as paginas num numero so
