@@ -193,7 +193,7 @@ details > summary::marker{content:"";font-size:0}
 .addr .btn:hover,.addr .btn:focus-visible{background:rgba(255,255,255,.24)}
 
 /* ---------- rodapé ---------- */
-footer{text-align:center;padding:36px 0 40px}
+footer{text-align:center;padding:36px 0 calc(112px + env(safe-area-inset-bottom))}
 .social{display:flex;gap:9px;justify-content:center;margin-bottom:20px;flex-wrap:wrap}
 .social a{
   display:inline-flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;
