@@ -2,6 +2,9 @@
 # FONTE ÚNICA dos procedimentos. Alterou aqui, roda gera.py e as duas páginas mudam.
 PROC = [
  ("cilios", "Cílios", [
+  dict(id="volume-soft", nome="Volume Soft", val="180",
+    desc="Volume leve e delicado, com fios distribuídos estrategicamente para criar mais presença, curvatura e definição, mantendo um resultado natural e elegante.",
+    specs=[("Sessão","2h"),("Manutenção","15 a 20 dias")]),
   dict(id="volume-natural", nome="Volume Natural", val="150",
     desc="Para quem ama naturalidade, mas quer um olhar mais expressivo — um efeito semelhante ao rímel, porém mais delicado.",
     specs=[("Sessão","2h"),("Manutenção","15 a 20 dias")]),
@@ -31,7 +34,7 @@ PROC = [
   dict(id="tintura", nome="Design com tintura", val="80",
     desc="Cor no fio, não na pele. Mais definição com aspecto natural — ideal para quem achou a henna marcada demais.",
     specs=[("Sessão","45 min"),("Dura","5 a 7 dias"),("","Sem manutenção")]),
-  dict(id="brow-lamination", nome="Brow Lamination", val="190",
+  dict(id="brow-lamination", nome="Brow Lamination", val="150",
     desc="Alinha e organiza os fios, deixando as sobrancelhas com aparência mais cheia e definida. Corrige pequenas falhas.",
     specs=[("Sessão","1h30"),("Dura","30 a 45 dias")]),
   dict(id="sense-brows", nome="Sense Brows · reconstrução", val="500", unid="3 sessões",
