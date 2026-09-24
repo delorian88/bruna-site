@@ -12,6 +12,7 @@ var CONFIG = {
     agendar:            "Oi, Bruna! Quero agendar um horário.",
     valores:            "Oi, Bruna! Quero receber a tabela de valores.",
 
+    "volume-soft":      "Oi, Bruna! Quero agendar o Volume Soft.",
     "volume-natural":   "Oi, Bruna! Quero agendar o Volume Natural.",
     "efeito-rimel":     "Oi, Bruna! Quero agendar o Efeito Rímel.",
     "volume-brasileiro":"Oi, Bruna! Quero agendar o Volume Brasileiro.",
